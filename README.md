@@ -1,5 +1,5 @@
 # portfolio
-Portifolio de desenvolvedor
+Portfolio de desenvolvedor
 
 ## Tarefas
 
