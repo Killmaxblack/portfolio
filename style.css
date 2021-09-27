@@ -1,13 +1,34 @@
 @import url('https://fonts.googleapis.com/css2? family = Acme & family = Alfa + Slab + One & family = Ramabhadra & display = swap');
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css');
 
 *{
     margin: 0px;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
+.hamburguer{
+   /* background-color: red;*/
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 1px #000;
 
+}
 header{
     width: 100%;
     height: 100vh;
@@ -53,16 +74,16 @@ header{
 }
 
 .banner p{
-    font-family: "Acme family ", serif;
+    font-family: "Acme family ";
     color: #fff;
     font-size: 2rem;
     text-shadow: 2rem .2rem rgba(0,0,0,0 ); 
     margin-bottom: 2rem;
     
-    animation: moveBanner 5s 0.7 forwards;
+    animation: moveBanner 7s 0.7 forwards;
 }
 .banner button{
-    font-family:" Ramabhadra",serif ;
+    font-family:" Ramabhadra" ;
     color: rgb(75, 163, 245);
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -74,7 +95,7 @@ header{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    animation: moveBanner 3s 0.9 forwards;
+    animation: moveBanner 7s 0.9 forwards;
 }
 
 .banner button:hover{
@@ -89,4 +110,27 @@ header{
     100%{
         transform: translateY(0rem);
     }
+}
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-item{
+    text-align: center;
+
+}
+.menu-link{
+    font-family:"Ramabhadra & display";
 }
