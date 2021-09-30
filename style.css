@@ -9,6 +9,12 @@
     text-decoration: none;
 }
 
+:root{
+    --font-primary: "Alfa Slab", serif;
+    --font-securary: "Acme family ", serif;
+    --font-action: " Ramabhadra", serif;
+}
+
 .hamburguer{
    /* background-color: red;*/
     width: 2rem;
@@ -24,8 +30,8 @@
 }
 .line{
     width: 100%;
-    height: .1rem;
-    background-color: white;
+    height: 0.1rem;
+    background-color: #fff;
     box-shadow: 0.1rem 0.1rem 1px #000;
 
 }
@@ -65,7 +71,7 @@ header{
 .banner h1{
     color: #ffff;
     font-size: 3em;
-    font-family: "Alfa Slab",serif;
+    font-family: var(--font-primary);
     font-weight: 300;
     text-shadow: .3rem.4rem 2px rgba(0,0,0,4 );
     line-height: 3.5rem; 
@@ -74,7 +80,7 @@ header{
 }
 
 .banner p{
-    font-family: "Acme family ";
+    font-family: var(--font-securary);
     color: #fff;
     font-size: 2rem;
     text-shadow: 2rem .2rem rgba(0,0,0,0 ); 
@@ -83,7 +89,7 @@ header{
     animation: moveBanner 7s 0.7 forwards;
 }
 .banner button{
-    font-family:" Ramabhadra" ;
+    font-family: var(--font-action);
     color: rgb(75, 163, 245);
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -117,10 +123,13 @@ header{
     background-color: #fff;
     position: fixed;
     top: 0;
+    right: -20rem;
+    transition: 2s;
+
+}
+.sidebar.show-menu{
     right: 0;
 }
-
-
 .menu{
     position: absolute;
     top: 40%;
@@ -129,8 +138,37 @@ header{
 }
 .menu-item{
     text-align: center;
+    margin-bottom: .5rem;
 
 }
 .menu-link{
     font-family:"Ramabhadra & display";
+    font-size: 2rem;
+    color: #555;
+    transition: color 1s;
+}
+.menu-link:hover{
+    color:  rgb(75, 163, 245);
+}
+.social-media{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social-media i{
+    background-color: #36768f;
+    border-radius: 50px 50px;
+    color: rgb(255, 255, 255,1);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s;
+}
+.social-media i:hover{
+    background-color:  rgb(8, 10, 12);
 }
