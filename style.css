@@ -27,6 +27,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    transition: 2s;
 }
 .show-menu .hamburguer{
    right: 16rem;
@@ -34,19 +35,19 @@
 .line{
     width: 100%;
     height: 0.1rem;
-    background-color: #fff;
+    background-color: rgb(105, 160, 241);
     box-shadow: 0.1rem 0.1rem 1px #000;
     transition: transform 1s;
 
 }
 .show-menu #line1{
     transform: rotate(45deg) translate(.3rem, .4rem);
+    
 
 }
 
 .show-menu #line2{
-    opacity: 0;
-    visibility: hidden;
+    transform: rotate(808deg);
 }
 
 .show-menu #line3{
@@ -65,6 +66,7 @@
     color: #fff;
     font-family: var(--font-action);
     opacity: 0;
+    
 }
 
 .hamburguer span::before{
@@ -128,8 +130,7 @@ header{
     color: #fff;
     font-size: 2rem;
     text-shadow: 2rem .2rem rgba(0,0,0,0 ); 
-    margin-bottom: 2rem;
-    
+    margin-bottom: 2rem;    
     animation: moveBanner 7s 0.7 forwards;
 }
 .banner button{
