@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? family = Acme & family = Alfa + Slab + One & family = Ramabhadra & display = swap');
+@import  url( "https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600; 0,700 ; 1.300; 1.400; 1.600 & family = Muli: ital, wght @ 0,200; 0,300; 0,400; 0,500; 0,500; 1200; 1.300; 1.400 & display = swap " );
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css');
 
@@ -10,9 +10,9 @@
 }
 
 :root{
-    --font-primary: "Alfa Slab", serif;
-    --font-securary: "Acme family ", serif;
-    --font-action: " Ramabhadra", serif;
+    --font-primary: "Ballo da 2" ;
+    --font-securary: "Josefin Slab";
+    --font-action: " Muli";
 }
 
 .hamburguer{
@@ -28,12 +28,56 @@
     justify-content: space-evenly;
     cursor: pointer;
 }
+.show-menu .hamburguer{
+   right: 16rem;
+}
 .line{
     width: 100%;
     height: 0.1rem;
     background-color: #fff;
     box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 1s;
 
+}
+.show-menu #line1{
+    transform: rotate(45deg) translate(.3rem, .4rem);
+
+}
+
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.3rem, -.45rem);;
+}
+
+.hamburguer span{
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #36768f;
+    color: #fff;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+
+.hamburguer span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #36768f;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+.show-menu .hamburguer:hover span{
+    opacity: 1;
 }
 header{
     width: 100%;
@@ -90,18 +134,19 @@ header{
 }
 .banner button{
     font-family: var(--font-action);
-    color: rgb(75, 163, 245);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: .1rem;
     background-color: #6a3093;
     background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #4b7db6, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #5d6d8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 1rem 3rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     animation: moveBanner 7s 0.9 forwards;
+    transition: 1s;
 }
 
 .banner button:hover{
@@ -127,7 +172,7 @@ header{
     transition: 2s;
 
 }
-.sidebar.show-menu{
+.show-menu .sidebar{
     right: 0;
 }
 .menu{
